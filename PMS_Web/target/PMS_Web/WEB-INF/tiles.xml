@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tilles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+  <definition name="baseTemplate" id="baseTemplate" template="/WEB-INF/layout/baseLayout.jsp">
+    <!-- <put-attribute name="title" value="${title}" /> -->
+    <put-attribute name="title" value="prestigepoint" />
+    <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+    <put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
+    <put-attribute name="body" value="${body}" />
+    <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+  </definition>
+  
+  <!-- for body and footer -->
+ <!--  <definition name="baseTemplate2" id="baseTemplate2" template="/WEB-INF/layout/baseLayout2.jsp">
+    <put-attribute name="body" value="${body}" />
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition> -->
+  
+  <!-- for body only -->
+  <!-- <definition name="welcome" id="welcome" template="/WEB-INF/layout/welcome.jsp">
+  </definition>
+   -->
+  <!-- Mapping for Welcome Page --> 
+  <definition name="login" id="login" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+    
+  </definition>
+  
+  
+  <!-- Mapping for registartion Page --> 
+  <definition name="Registration" id="Registration" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/registration.jsp" />
+    
+  </definition>
+  
+   <!-- Mapping for Welcome Page --> 
+  <definition name="save" id="save" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/save.jsp" />
+    
+  </definition>
+  
+   <!-- Mapping for Registered  Page --> 
+  <definition name="Registered" id="Registered" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/Registered.jsp" />
+    
+  </definition>
+
+<!-- Mapping for Add Project Page --> 
+  <definition name="project" id="project" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/project.jsp" />
+    
+  </definition>
+
+  
+  
+  
+  <!-- Mapping for Edit project page Page --> 
+  <definition name="edit" id="edit" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/edit.jsp" />
+    
+  </definition>
+  </tiles-definitions>
